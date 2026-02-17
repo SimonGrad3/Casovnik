@@ -1,59 +1,34 @@
-# Casovnik
+# Časovnik
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Naloga je naslednja: v [angularju](https://angular.io/) naredi aplikacijo za beleženje časa, ki ga uporabnik preživi na različnih straneh aplikacije.
 
-## Development server
+Če še ne poznaš angularja, priporočam, da greš najprej skozi [tutorial](https://angular.io/tutorial).
 
-To start a local development server, run:
+Ideja je naslednja, ustvari aplikacijo, ki ko se zažene uporabnik sreča login screen. 
+Ta login screen je lahko zelo preprost, npr. okno kjer vpiše svoje uporabniško ime in gumb login (ne rabiš skrbeti za varnost).
 
-```bash
-ng serve
-```
+- Ustvari privat [GitHub](https://github.com/) repozitorij za nalogo. 
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Ko se uporabnik logina, naj si aplikacija zapomne trenutnega userja, kajti beležili bomo čas, ki ga je ta user preživel na različnih straneh te aplikacije.
 
-## Code scaffolding
+- Po loginu naj userja preusmeri na nek home page, kjer ima na voljo preklapljanja med različnimi stranmi aplikacije. 
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Aplikacija naj ima vsaj 3 strani med katermi lahko user navigira. Strani ne rabijo imeti dosti vsebine, samo toliko da je videti da smo na različnih straneh.
 
-```bash
-ng generate component component-name
-```
+- Ena od teh strani naj bo stran za izpis preživetega časa. 
+Ta stran naj ima tabelo, v kateri je seznam strani, za katero naj za vsako piše, koliko časa je do sedaj user skupno preživel na njej.
+Namreč med tem ko user navigira med različnimi stranmi aplikacije naj se sproti shranjuje koliko časa je preživel na vsaki.
+V seznamu strani mora biti tudi ta, kjer je tabela s časi.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Ko user zapre aplikacijo, naj se čas neha beležiti. Obstaja naj tudi logout gumb, ki uporabnika odjavi in neha beležiti njegov čas.
 
-```bash
-ng generate --help
-```
+- Če uporabnik kasneje spet odpre aplikacijo in se prijavi z istimi podatki (username), naj se beleženje njegovega časa nadaljuje od že shranjenega.
 
-## Building
+- Če se prijavi drug uporabnik, naj se njegov čas beleži ločeno.
 
-To build the project run:
+- Bonus točka, če se čas update-a v živo, med tem, ko smo na strani s tabelo s časi.
 
-```bash
-ng build
-```
+- Ko je naloga zaključena dodaj uporabnika `urska19` na ta repozitorij, da jo pregleda in obvesti `ales.por@abelium.com` o tem, da si nalogo zaključil/a.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Have fun.
