@@ -18,5 +18,22 @@ import { Router } from '@angular/router';
   styleUrl: './stran0.css',
 })
 export class Stran0 {
+  constructor(private router: Router) {}
 
+  desno() {
+    this.router.navigate(['/stran1']);
+  }
+
+ levo() {
+    this.router.navigate(['/stranm1']);
+  }
+
+  tabela() {
+    this.router.navigate(['/tabela']);
+  }
+
+  logout() {
+  localStorage.removeItem('currentUser'); 
+  this.router.navigate(['/login']); 
+}
 }

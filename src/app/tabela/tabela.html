@@ -1,1 +1,13 @@
-<p>tabela works!</p>
+<h2>Preživeti čas po straneh</h2>
+
+<table border="1">
+  <tr>
+    <th>Stran</th>
+    <th>Čas (sekunde)</th>
+  </tr>
+
+  <tr *ngFor="let key of keys()">
+    <td>{{ key }}</td>
+    <td>{{ times[key] }}</td>
+  </tr>
+</table>
