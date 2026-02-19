@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router } from '@angular/router';
+import { TimeTrackingService } from '../services/time-tracking';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class Login {
     ime:'',
   };
   
-  constructor(private router: Router) {}
+  constructor(private router: Router, private timeService: TimeTrackingService) {}
 
   login() {
     if (!this.user.ime.trim()) return alert('Vnesi uporabniško ime');
@@ -39,6 +40,7 @@ export class Login {
     localStorage.setItem('users', JSON.stringify(allUsers));
     // Shrani trenutnega
     localStorage.setItem('currentUser', this.user.ime);
+    this.timeService.startTracking();  // Začni sledenje časa ob prijavi
     this.router.navigate(['/stran0']);
   }
 }

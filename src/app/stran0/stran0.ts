@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router } from '@angular/router';
+import { TimeTrackingService } from "../services/time-tracking";
 
 
 @Component({
@@ -18,7 +19,7 @@ import { Router } from '@angular/router';
   styleUrl: './stran0.css',
 })
 export class Stran0 {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private timeService: TimeTrackingService) {}
 
   desno() {
     this.router.navigate(['/stran1']);
@@ -33,6 +34,8 @@ export class Stran0 {
   }
 
   logout() {
+  // USTAVI ŠTOPARICO
+  this.timeService.stopTracking();
   localStorage.removeItem('currentUser'); 
   this.router.navigate(['/login']); 
 }
