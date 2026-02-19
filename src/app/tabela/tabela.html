@@ -1,13 +1,22 @@
+<div style="display: flex;">
+    <button mat-raised-button class="logout" (click)="logout()">Logout</button>
+</div>
+
+<div class="container">
 <h2>Preživeti čas po straneh</h2>
 
-<table border="1">
+<table>
   <tr>
     <th>Stran</th>
-    <th>Čas (sekunde)</th>
+    <th>Čas [s]</th>
   </tr>
 
   <tr *ngFor="let key of keys()">
-    <td>{{ key }}</td>
+    <td>{{ key.replace('/', '').replace('tabela', 'Tabela').replace('stran', 'Stran ').replace('m', '-') }}</td>
     <td>{{ times[key] }}</td>
   </tr>
 </table>
+
+  <button mat-raised-button class="gumb" (click)="stran0()">Nazaj na stran 0</button>
+
+</div>

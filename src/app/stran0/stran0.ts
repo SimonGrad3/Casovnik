@@ -34,7 +34,6 @@ export class Stran0 {
   }
 
   logout() {
-  // USTAVI ŠTOPARICO
   this.timeService.stopTracking();
   localStorage.removeItem('currentUser'); 
   this.router.navigate(['/login']); 
